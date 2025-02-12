@@ -1,7 +1,9 @@
+import { SignOutButton, SignUpButton } from "@clerk/nextjs";
+
 export default function Home() {
   return (
     <>
-      <h1>Welcome to Next.js!</h1>
+    <div>Hello World</div>
     </>
   );
 }
