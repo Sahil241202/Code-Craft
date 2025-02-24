@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -16,10 +17,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// export const metadata: Metadata = {
-//   title: "Code Craft",
-//   description: "Share and run code snippets",
-// };
+export const metadata: Metadata = {
+  title: "Code Craft",
+  description: "Share and run code snippets",
+};
 
 export default function RootLayout({
   children,
