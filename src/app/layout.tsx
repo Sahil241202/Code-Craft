@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
+import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+
+const ConvexClientProvider = dynamic(
+  () => import("@/components/providers/ConvexClientProvider"),
+  { ssr: false }
+);
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
